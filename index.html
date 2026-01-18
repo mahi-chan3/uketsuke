@@ -11,14 +11,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="uketsuke">
 
-    <script>
-    /**
-     * ここにVue.jsのライブラリ本体を配置します。
-     * 容量削減のため、実行時にCDNから取得を試み、失敗したらキャッシュから読み込む
-     * または、このスクリプトタグ内にVueのソースを貼り付けることも可能です。
-     * 今回は「初回読み込み時にキャッシュ」するPWA方式を推奨します。
-     */
-    </script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
 
     <style>
@@ -155,7 +147,6 @@
 </div>
 
 <script>
-// Service Workerを登録してオフラインキャッシュを有効化
 if ('service-worker' in navigator) {
     window.addEventListener('load', () => {
         const swCode = `
