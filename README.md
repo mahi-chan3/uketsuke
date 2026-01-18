@@ -1,25 +1,43 @@
-# uketsuke (Reception System)
+# uketsuke (Web-Based Reception Kiosk)
 
-A lightweight, customizable web-based reception system designed for iPad and iPhone. 
-By adding it to the Home Screen, it functions as a standalone, full-screen kiosk application.
+A lightweight, single-file reception system optimized for iPad and iPhone. It transforms any iOS device into a professional, dedicated reception kiosk by leveraging PWA (Progressive Web App) technology.
 
-## Key Features
-- **Zero Configuration**: A single-file HTML architecture that allows immediate deployment without server-side setup.
-- **Dynamic Customization**: Easily modify button labels, color schemes, and font sizes directly from the settings menu.
-- **Secure Access**: The configuration panel is password-protected to prevent unauthorized modifications.
-- **PWA Optimized**: Supports "Add to Home Screen" on iOS for a native, immersive user experience.
+##  Key Features
 
-## Deployment and Usage
-1. Open the hosted URL in Safari on an iOS/iPadOS device.
-2. Tap the Share button and select "Add to Home Screen."
-3. Launch the app from the Home Screen.
-4. Access the Settings button in the top-right corner, establish a password, and proceed with the initial configuration.
+- **Offline Capability**: Built-in Service Worker ensures the system remains functional even without an internet connection once initially loaded.
+- **Dynamic In-App Editor**: 
+  - **Live Customization**: Modify button labels, sub-titles, and FaceTime addresses on the fly.
+  - **Granular Control**: Adjust font sizes via a stepper, change text alignment, and pick custom color schemes (background/text) for each item.
+  - **Efficient Management**: Supports one-click duplication and deletion of reception entries.
+- **Zero-Backbone Architecture**: A standalone HTML/JavaScript file with no server-side database required; all configurations are stored locally via the `localStorage` API.
+- **Secure Access**: The configuration panel is password-protected to prevent unauthorized modifications by visitors.
+- **Native Experience**: Fully optimized for "Add to Home Screen" on iOS, providing a full-screen, immersive interface without browser UI elements.
 
-## Disclaimer
-This software is provided "as is," without warranty of any kind. The author shall not be held liable for any damages or issues arising from the use of this application. It is strongly recommended to perform thorough testing prior to implementing this system in a production or professional environment.
+##  Deployment and Usage
 
-## License
+1. **Open**: Host the `index.html` on any web server or open the file in Safari on an iOS/iPadOS device.
+2. **Install**: Tap the **Share** button and select **"Add to Home Screen."**
+3. **Launch**: Open the "uketsuke" icon from your Home Screen.
+4. **Initial Setup**:
+   - Tap the **"設定 (Settings)"** button in the top-right corner.
+   - Establish a new password (first-time setup).
+   - Enter the editor to add your departments or staff names along with their FaceTime addresses.
+5. **Customize**: Use the toolbar in edit mode to adjust font sizes, alignment, and colors. Tap **"完了 (Done)"** to save.
+
+##  Technical Specifications
+
+- **Frontend**: Vue.js 3 (Composition-ready via Global Build).
+- **Storage**: Browser `localStorage` for persistent configuration.
+- **Communication**: Triggers native video/audio calls using the `facetime://` URI scheme.
+- **PWA**: Inline Service Worker implementation for resource caching and offline reliability.
+
+##  Disclaimer
+
+This software is provided "as is," without warranty of any kind. The author shall not be held liable for any damages or issues (such as missed calls or configuration loss) arising from the use of this application. It is strongly recommended to perform thorough testing in your specific network and device environment prior to professional implementation.
+
+##  License
+
 This project is licensed under the [MIT License](LICENSE).
 
 ### Third-Party Attribution
-- **Vue.js**: MIT License (c) 2013-present, Yuxi (Evan) You
+- **Vue.js**: MIT License (c) 2013-present, Yuxi (Evan) You.
