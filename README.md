@@ -2,6 +2,8 @@
 
 A lightweight, single-file reception system optimized for iPad and iPhone. It transforms any iOS device into a professional, dedicated reception kiosk by leveraging PWA (Progressive Web App) technology.
 
+https://mahi-chan3.github.io/uketsuke/
+
 ##  Key Features
 
 - **Offline Capability**: Built-in Service Worker ensures the system remains functional even without an internet connection once initially loaded.
